@@ -63,6 +63,9 @@ def main():
     dS11 = kl(E[1], pb1)
     lines.append("  P_b(.|0) = (%.4f, %.4f) ; P_b(.|1) = (%.4f, %.4f)"
                  % (pb0[0], pb0[1], pb1[0], pb1[1]))
+    lines.append("  P_b(.|0) vs P_f(.|0): %s ; P_b(.|1) vs P_f(.|1): %s"
+                 % ("EQUAL" if abs(pb0[0]-E[0][0]) < 1e-12 and abs(pb0[1]-E[0][1]) < 1e-12 else "NOT equal",
+                    "EQUAL" if abs(pb1[0]-E[1][0]) < 1e-12 and abs(pb1[1]-E[1][1]) < 1e-12 else "NOT equal"))
     lines.append("  DeltaS(0->1) = %.4f ; DeltaS(1->0) = %.4f"
                  " ; DeltaS(0->0) = %.4f ; DeltaS(1->1) = %.4f"
                  % (dS01, dS10, dS00, dS11))
@@ -72,8 +75,10 @@ def main():
     pbsync1 = Pb(1, Esync)
     dSsync01 = kl(Esync[0], pbsync1)
     lines.append("  sync emission E=delta: P_b(.|1) = (%.4f, %.4f)"
-                 " ; DeltaS(0->1) = %.4f (= ln 5)"
-                 % (pbsync1[0], pbsync1[1], dSsync01))
+                 " ; P_b(.|1) vs P_f(.|1): %s ; DeltaS(0->1) = %.4f (= ln 5)"
+                 % (pbsync1[0], pbsync1[1],
+                    "EQUAL" if abs(pbsync1[0]-Esync[1][0]) < 1e-12 and abs(pbsync1[1]-Esync[1][1]) < 1e-12 else "NOT equal",
+                    dSsync01))
 
     # ---- three-state counterexample ----
     lines.append("== three-state counterexample: T(C|A)=T(C|B)=1,"

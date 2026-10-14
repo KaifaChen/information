@@ -29,14 +29,14 @@ Dependencies: both scripts use only the Python 3 standard library. No third-part
 ## Checksums (SHA256, locked)
 
 ```
-C767AD80415B8868A3489DB7153E22FE943C711F66E984D1D64C0C877D4C0BCB  examples_check.py
+210BFFC68740B8FB5E883959C7893159CEBF3F67BBC17630768A75DE164B39F2  examples_check.py
 3359BBEAC7D9F8ADD9DBA577BAB4CF98B77BCFE40DF66F1C5C40D205AC838D5D  脚本/kx_lattice.py
 F8A8F4F9796C80C77AC33E9B894C59323F9CEF94F7BFC1AD2F90CACA20E007C3  结果/route_func3.tsv
 ```
 
 ## Smoke test (2026-10, passed)
 
-- `examples_check.py`: reproduces the paper's worked numbers (h_μ=0.5446, I=0.1284, ΔS(0→1)=0.3389, sync-emission ΔS(0→1)=ln5, ΔS(A→C)=ln2, A=0.8014); two runs byte-identical;
+- `examples_check.py`: reproduces the paper's worked numbers (h_μ=0.5446, I=0.1284, ΔS(0→1)=0.3389, sync-emission ΔS(0→1)=ln5, ΔS(A→C)=ln2, A=0.8014); explicitly shows P_b(·|s) ≠ P_f(·|s) for the two-state machine (detailed balance is state-chain reversibility and does not imply symbol-layer same-point reversibility); two runs byte-identical;
 - `kx_lattice.py`: K=92, T-K1 maximum deviation 7.105e-15, T-K2 closed, T-K3 H(p)–I ≈ +0.97; two runs byte-identical (SHA256 807675E10BCC1E233E9D88216B9B3812E14FD3221A025FC664438C8BFBBFEE62).
 
 ## License

@@ -29,14 +29,14 @@ python 脚本/kx_lattice.py                 # 输出同时写入 结果/kx_latti
 ## 校验和（SHA256，锁定件）
 
 ```
-C767AD80415B8868A3489DB7153E22FE943C711F66E984D1D64C0C877D4C0BCB  examples_check.py
+210BFFC68740B8FB5E883959C7893159CEBF3F67BBC17630768A75DE164B39F2  examples_check.py
 3359BBEAC7D9F8ADD9DBA577BAB4CF98B77BCFE40DF66F1C5C40D205AC838D5D  脚本/kx_lattice.py
 F8A8F4F9796C80C77AC33E9B894C59323F9CEF94F7BFC1AD2F90CACA20E007C3  结果/route_func3.tsv
 ```
 
 ## 冒烟测试（2026-10，通过）
 
-- `examples_check.py`：复现论文全部笔算数字（h_μ=0.5446、I=0.1284、ΔS(0→1)=0.3389、同步发射 ΔS(0→1)=ln5、ΔS(A→C)=ln2、A=0.8014）；双运行逐字节一致；
+- `examples_check.py`：复现论文全部笔算数字（h_μ=0.5446、I=0.1284、ΔS(0→1)=0.3389、同步发射 ΔS(0→1)=ln5、ΔS(A→C)=ln2、A=0.8014）；显式输出两态机 P_b(·|s)≠P_f(·|s)（细致平衡是状态链可逆性，不蕴含符号层同点可逆）；双运行逐字节一致；
 - `kx_lattice.py`：K=92，T-K1 最大偏差 7.105e-15，T-K2 闭合，T-K3 H(p)–I ≈ +0.97；双运行逐字节一致（SHA256 807675E10BCC1E233E9D88216B9B3812E14FD3221A025FC664438C8BFBBFEE62）。
 
 ## 许可证
