@@ -1,0 +1,4 @@
+# 运行时生成物与缓存
+__pycache__/
+*.pyc
+结果/kx_lattice.txt
