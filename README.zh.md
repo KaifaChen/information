@@ -22,6 +22,20 @@ python 脚本/kx_lattice.py                 # 输出同时写入 结果/kx_latti
 
 依赖：两个脚本均仅用 Python 3 标准库，无需任何第三方包。
 
+## 预期输出（examples_check.py）
+
+```
+pi = (0.4000, 0.6000)
+H(tau|0) = 0.6109 ; H(tau|1) = 0.5004 ; h_mu = 0.5446
+Pbar = (0.4000, 0.6000) ; H(tau) = 0.6730 ; I = 0.1284 ; C_mu = 0.6730
+P_b(.|0) = (0.5500, 0.4500) ; P_b(.|1) = (0.3000, 0.7000)
+P_b(.|0) vs P_f(.|0): NOT equal ; P_b(.|1) vs P_f(.|1): NOT equal
+DeltaS(0->1) = 0.3389 ; DeltaS(1->0) = 0.2580 ; DeltaS(0->0) = 0.0472 ; DeltaS(1->1) = 0.0257
+sync emission E=delta: P_b(.|1) = (0.2000, 0.8000) ; P_b(.|1) vs P_f(.|1): NOT equal ; DeltaS(0->1) = 1.6094 (= ln 5)
+DeltaS(A->C) = 0.6931 (= ln 2)
+A = 0.8014
+```
+
 ## 复现约定
 
 - `kx_lattice.py`：数据 `route_func3.tsv`（add-1 平滑）；双运行逐字节一致后锁定；T-K1 判据为五条恒等式最大偏差 < 1e-12。
