@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 结果/kx_lattice.txt
+examples_check.txt
