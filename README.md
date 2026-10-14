@@ -1,6 +1,6 @@
-# information scripts — Supplementary Materials of *On the Constraint Equations of Information*
+# information scripts — Supplementary Materials of *Conditional Independence and the Constraint Equations of Information*
 
-This directory contains the numerical-verification scripts and data of the paper *On the Constraint Equations of Information: Derivation, Closure, and Dynamics of the Four Functionals* (submitted with the paper as supplementary material).
+This directory contains the numerical-verification scripts and data of the paper *Conditional Independence and the Constraint Equations of Information: Derivation, Closure, and Natural-Gradient Dynamics of the Four Functionals* (submitted with the paper as supplementary material).
 
 ## Files and their roles in the paper
 
