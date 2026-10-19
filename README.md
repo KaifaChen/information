@@ -49,7 +49,7 @@ A = 0.8014
 
 ```
 210BFFC68740B8FB5E883959C7893159CEBF3F67BBC17630768A75DE164B39F2  examples_check.py
-F769C0C4683DF2B9E75E68FF9D6B34E21F74F3BBDDC895D4B47D1BEF294DC51F  appendix_b_jacobian.py
+45809996FFB8B6DF971F781BFA685D1E9DAA6132B60E9B6F3636382014EC75AB  appendix_b_jacobian.py
 3359BBEAC7D9F8ADD9DBA577BAB4CF98B77BCFE40DF66F1C5C40D205AC838D5D  脚本/kx_lattice.py
 F8A8F4F9796C80C77AC33E9B894C59323F9CEF94F7BFC1AD2F90CACA20E007C3  结果/route_func3.tsv
 ```
@@ -57,7 +57,7 @@ F8A8F4F9796C80C77AC33E9B894C59323F9CEF94F7BFC1AD2F90CACA20E007C3  结果/route_f
 ## Smoke test (2026-10, passed)
 
 - `examples_check.py`: reproduces the paper's worked numbers (h_μ=0.5446, I=0.1284, ΔS(0→1)=0.3389, sync-emission ΔS(0→1)=ln5, ΔS(A→C)=ln2, A=0.8014); explicitly shows P_b(·|s) ≠ P_f(·|s) for the two-state machine (detailed balance is state-chain reversibility and does not imply symbol-layer same-point reversibility); two runs byte-identical;
-- `appendix_b_jacobian.py`: reproduces the Appendix B.1 Jacobian exactly (H row: 0, 0, −0.513482, −0.231049, +0.051384; singular values 0.921121/0.363167/0.140093/0.069091; row rank 4; minors −0.036665 and −0.025870);
+- `appendix_b_jacobian.py`: reproduces the Appendix B.1 Jacobian exactly (H row: 0, 0, −0.513482, −0.231049, +0.051384; singular values 0.921121/0.363167/0.140093/0.069091; row rank 4; minors −0.036665 and −0.025870); the multi-point check gives rank 4 at all 20 seeded random family points;
 - `kx_lattice.py`: K=92, T-K1 maximum deviation 7.105e-15, T-K2 closed, T-K3 H(p)–I ≈ +0.97; two runs byte-identical (SHA256 807675E10BCC1E233E9D88216B9B3812E14FD3221A025FC664438C8BFBBFEE62).
 
 ## License
